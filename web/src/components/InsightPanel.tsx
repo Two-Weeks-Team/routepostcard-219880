@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useState } from "react";
 import { fetchInsights } from '@/lib/api';
 import { MapPinIcon, CloudRainIcon } from '@heroicons/react/24/outline';
