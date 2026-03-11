@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f7f2ed;
+  --color-foreground: #2b2a28;
+  --color-primary: #c173b2; /* muted pink */
+  --color-accent: #6b8e23; /* sage */
+  --color-card: #ffffff;
+  --color-muted: #e2e0dd;
+  --color-border: #d1cfc9;
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --radius: 0.75rem;
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+html, body {
+  min-height: 100%;
+  background: linear-gradient(135deg, var(--color-background) 0%, #eae3da 100%);
+  background-attachment: fixed;
+  font-family: system-ui, sans-serif;
+}
+
+/* film‑grain overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1" height="1" viewBox="0 0 1 1"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" /><feColorMatrix type="saturate" values="0" /><feComponentTransfer><feFuncA type="linear" slope="0.15" /></feComponentTransfer></filter></svg>');
+  opacity: 0.07;
+}
