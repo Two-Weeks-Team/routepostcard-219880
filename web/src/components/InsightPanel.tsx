@@ -1,15 +1,16 @@
-"use client";
+use client;
 
 import { useEffect, useState } from "react";
 import { fetchInsights } from '@/lib/api';
 import { MapPinIcon, CloudRainIcon } from '@heroicons/react/24/outline';
 
-type DayItem = {
+// Exported interface for the day item to avoid any potential TypeScript parsing issues
+export interface DayItem {
   date: string;
   headline: string;
   thumbnail: string;
   activities: string[];
-};
+}
 
 type InsightPanelProps = {
   plan: {
